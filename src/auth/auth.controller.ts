@@ -1,4 +1,4 @@
-import { Controller, Post } from "@nestjs/common";
+import { Controller, Post , Get} from "@nestjs/common";
 import { AuthService } from "./auth.service";
 
 @Controller('/auth')
@@ -16,4 +16,8 @@ export class AuthController {
         return this.authService.login();
     }
 
+    @Get("/details")
+    details(){
+        return "User details";
+    }
 }
